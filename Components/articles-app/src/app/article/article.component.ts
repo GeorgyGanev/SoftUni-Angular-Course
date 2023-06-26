@@ -24,7 +24,7 @@ export class ArticleComponent {
 
   readMore() {
     this.articleDescLen += this.symbols;
-    if (this.articleDescLen > this.articleDesc.length){
+    if (this.articleDescLen >= this.articleDesc.length){
       this.showReadMoreBtn = false;
       this.showHideBtn = true;
     } else {
