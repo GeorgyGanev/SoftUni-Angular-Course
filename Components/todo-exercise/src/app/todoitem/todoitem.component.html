@@ -1,0 +1,14 @@
+<li data-id='test1'>
+    <div [ngStyle]="{textDecoration: todo.isComplete ? 'line-through': ''}">{{todo.title}}</div>
+    <div class="tools">
+        <button (click)="onMarkComplete()" class="complete">
+            <i class="fas fa-check"></i>
+        </button>
+        <button (click)="onEditClick(todo)" class="edit">EDIT</button>
+        <button (click)="onDeleteSubmit(todo)" class="delete">
+            <i class="fas fa-times"></i>
+        </button>
+    </div>
+</li>
+
+

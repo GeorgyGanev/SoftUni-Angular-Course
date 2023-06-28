@@ -1,0 +1,15 @@
+<div class="todo">
+
+  <app-header (newItemEvent)="addNewTodo($event)" />
+
+  <div class="todolist">
+      <h3>List of Works Todo:</h3>
+      <p class="error-info"></p>
+
+      <app-todoitem *ngFor="let todo of todos" [todo]="todo" (outputTodo)="deleteTodo($event)" (editClick)="editTodo($event)" ></app-todoitem>     
+
+  </div>
+</div>
+
+<app-popup *ngIf="showEdit" [todoToEdit]="todoToEdit" (cancelEdit)="cancelEdit($event)" (editData)="onEditTodo($event)" />
+

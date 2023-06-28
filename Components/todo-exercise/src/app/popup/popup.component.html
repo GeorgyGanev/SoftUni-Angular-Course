@@ -1,0 +1,9 @@
+<div class="popup">
+    <h3>Edit your todo:</h3>
+    <div class="popup-body">
+        <p class="popup-info"></p>
+        <input value="{{todoToEdit.title}}" type="text" class="popup-input" placeholder="Update todo..." #editInput>
+        <button (click)="onUpdate(editInput.value)" class="popup-btn accept">Update</button>
+        <button (click)="hideEdit()" class="popup-btn cancel">Cancel</button>
+    </div>
+  </div>
