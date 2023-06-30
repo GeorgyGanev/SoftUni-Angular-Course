@@ -1,0 +1,14 @@
+<div class="todo">
+
+  <app-header (newItemEvent)="addNewTodo($event)" />
+
+  <div class="todolist">
+      <h3>List of Works Todo:</h3>
+      <p *ngIf="missingTitle" class="error-info">Cannot add todo without a title</p>
+
+      <app-todoitem *ngFor="let todo of todos" [todo]="todo" (todoToDelete)="deleteTodo($event)" (todoToEdit)="editTodo($event)"></app-todoitem> 
+  </div>
+</div>
+
+<app-popup *ngIf="showEdit" (cancelEdit)="cancelEdit($event)" [todoToEdit]="todoToEdit" (titleToChange)="titleToChange($event)" />
+
